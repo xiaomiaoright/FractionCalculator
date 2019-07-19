@@ -42,7 +42,14 @@ public class Fraction {
         }
 
         public String toString(){
-            String fractionString = this.numerator + "/" + this.denominator;
+            String fractionString;
+            if(this.denominator == this.numerator && this.denominator != 1){
+                fractionString = String.valueOf(1);
+            } else if (this.denominator == 1) {
+                fractionString = String.valueOf(this.numerator);
+            } else {
+                fractionString = this.numerator + "/" + this.denominator;
+            }
             return fractionString;
         }
 
